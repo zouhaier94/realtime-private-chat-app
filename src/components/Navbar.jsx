@@ -3,7 +3,7 @@ import React from 'react'
 export default function Navbar() {
 
   return (
-    <div className='flex items-center bg-[#2f2d52] h-[50px]  justify-around '>
+    <div className='flex items-center bg-[#2f2d52] h-[50px]  justify-around'>
     <span className='p-1 font-semibold text-white text-lg'>Logo</span>
 
     <div className='flex space-x-4 '>
