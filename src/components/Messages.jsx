@@ -3,7 +3,7 @@ import Message from '../components/Message'
 
 export default function Messages() {
   return (
-    <div className='bg-[#ddddf7] p-5 h-[500px] '>
+    <div className='bg-[#ddddf7] p-1 h-[500px] overflow-y-scroll '>
       <Message/>
       <Message/>
       <Message/>
@@ -14,6 +14,7 @@ export default function Messages() {
       <Message/>
       <Message/>
       <Message/>
+
     </div>
   )
 }
