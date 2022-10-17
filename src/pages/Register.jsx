@@ -3,11 +3,13 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../Firebase"; // We have to take this from our file
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
 
   const [err, setErr] = useState(false)
   const [errMsg, setErrMsg] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
 
@@ -45,10 +47,11 @@ export default function Register() {
               email,
               photoURL:downloadURL
             })
+            await  setDoc(setDoc(db,"userChats",res.user.uid,{}))
           }); 
         }
       );
-      
+      navigate('/')
     } catch (err) {
       setErr(true);
       setErrMsg(err.message)
@@ -81,9 +84,9 @@ export default function Register() {
                 placeholder="Password"
               />
 
-              <input type="file" id="file" className="hidden" />
+              <input type="file" id="file" className="hidden"/>
 
-              <label htmlFor="file">
+              <label htmlFor="file" className="w-fit">
                 <img
                   className="h-14 cursor-grab"
                   src={require("../images/addImg.png")}
