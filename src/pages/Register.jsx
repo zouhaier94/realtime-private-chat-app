@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../Firebase"; // We have to take this from our file
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Register() {
 
@@ -47,11 +47,11 @@ export default function Register() {
               email,
               photoURL:downloadURL
             })
-            await  setDoc(setDoc(db,"userChats",res.user.uid,{}))
+            await setDoc(doc(db,"userChats",res.user.uid),{})
           }); 
         }
       );
-      navigate('/')
+      navigate('/login')
     } catch (err) {
       setErr(true);
       setErrMsg(err.message)
@@ -101,7 +101,7 @@ export default function Register() {
               className="cursor-pointer mt-5 bg-[#2d3436] px-4 py-2 text-white font-bold w-full rounded-md"
             />
 
-            <p className="mx-12 pt-2">You don't have an account? Register</p>
+            <p className="mx-16 pt-2">You do have an account? <Link to="/login">Login</Link></p>
           </form>
           {err && alert(errMsg)}
         </div>
