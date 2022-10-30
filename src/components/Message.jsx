@@ -22,7 +22,6 @@ export default function Message({ message }) {
   const d = message.date.toDate();
   console.log(d)
 
-
   return (
     <div ref={ref} className={message.senderId === currentUser.uid ?
       'flex flex-row-reverse gap-1 border p-1' :
