@@ -101,7 +101,7 @@ export default function Register() {
             <input
               type="submit"
               value="Sign Up"
-              className="cursor-pointer mt-5 bg-[#00a400] px-4 py-1 text-white font-bold w-[220px] text-lg rounded-md"
+              className="cursor-pointer mt-5 bg-[#00a400] px-4 py-1 text-white font-bold w-[220px] text-lg rounded-md cursor-pointer"
             />
             </div>
             

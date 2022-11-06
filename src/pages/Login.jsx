@@ -40,7 +40,7 @@ export default function Login() {
             <div className="flex flex-col gap-5 items-center">
             <input type="email"  className="w-[350px] border border-gray-300 px-4 py-2 rounded-md mt-4 text-lg"  placeholder="Email"  />  
             <input type="password" className=" w-[350px] border border-gray-300 px-4 py-2 rounded-md text-lg"  placeholder="Password" /> 
-            <input type="submit" value='Continue' className="mt-5 bg-[#0a7cff] px-4 py-2 text-white w-fit rounded-3xl" />  
+            <input type="submit" value='Continue' className="mt-5 bg-[#0a7cff] px-4 py-2 text-white w-fit rounded-3xl cursor-pointer" />  
             <p className='mx-12'>You don't have an account? <Link to="/register">Register</Link></p>
             </div>
             
