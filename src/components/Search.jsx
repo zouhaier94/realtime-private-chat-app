@@ -58,7 +58,7 @@ export default function Search() {
   }
 
   return (
-    <div className="h-auto flex flex-col border-b border-gray-300">
+    <div className="h-auto flex flex-col border-b border-gray-300  pl-2">
 
       <div className="py-1 px-2">
         <input

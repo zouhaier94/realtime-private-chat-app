@@ -67,10 +67,10 @@ export default function Input() {
   };
 
   return (
-    <div className='h-[50px] bg-white p-1 flex border-t '>
+    <div className='h-[50px] bg-white p-1 flex border-t'>
 
       <input 
-      className="md:w-[410px] w-[180px] outline-none placeholder-gray-300" 
+      className="lg:w-[450px] md:w-[410px] w-[180px] outline-none placeholder-gray-300" 
       type="text" 
       placeholder='Type something...' 
       onChange={(e) => setText(e.target.value)}

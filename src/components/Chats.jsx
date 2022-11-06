@@ -31,14 +31,14 @@ export default function Chats() {
   };
   
   return (
-    <div>
+    <div className=''>
 
       {Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat) => (
 
 
         <div key={chat[0]}
           onClick={()=>handleSelect(chat[1].userInfo)}
-          className='border-b border-gray-300 hover:bg-gray-100 cursor-pointer'>
+          className='border-b border-gray-300 hover:bg-gray-100 cursor-pointer pl-2'>
           <div className="flex space-x-2 p-2">
             <img
               className="h-[40px] w-[40px] rounded-3xl"
