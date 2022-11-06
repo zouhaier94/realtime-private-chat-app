@@ -9,15 +9,15 @@ export default function Chat() {
 
 
   return (
-    <div className='basis-2/3'>
+    <div className='md:w-[600px] w-[290px] md:h-[600px] h-[500px]'>
 
-      <div className='flex bg-[#5d5b8d] p-3 h-[50px]'>
+      <div className='flex bg-[#006AFF] md:p-3 p-1 md:h-[50px] h-[40px]'>
 
-        <div className='basis-4/5 font-semibold text-[#ddddf7]'>{data.user?.displayName}</div>
+        <div className='md:w-[400px] w-[300px] font-semibold text-white'>{data.user?.displayName}</div>
 
-        <div className='basis-1/5 flex ml-8'>
-        <img className='h-7 mr-1 cursor-pointer' src={require('../images/cam.png')} alt='' />
-        <img className='h-7 mr-1 cursor-pointer' src={require('../images/add.png')} alt='' />
+        <div className='md:w-[100px] w-[100px] flex place-content-end ml-1 md:mr-6 mr-2' >
+        <img className='h-7 cursor-pointer' src={require('../images/cam.png')} alt='' />
+        <img className='h-7 cursor-pointer' src={require('../images/add.png')} alt='' />
         <img className='h-7 cursor-pointer' src={require('../images/more.png')} alt='' />
         </div>
 

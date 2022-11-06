@@ -58,11 +58,11 @@ export default function Search() {
   }
 
   return (
-    <div className="h-auto flex flex-col">
+    <div className="h-auto flex flex-col border-b border-gray-300">
 
       <div className="py-1 px-2">
         <input
-          className="basis-1/5 bg-transparent text-white rounded-sm placeholder-gray-300 outline-none "
+          className=" basis-1/5 bg-transparent text-black rounded-sm placeholder-gray-300 outline-none "
           placeholder="Find a User"
           onChange={e => setUsername(e.target.value)}
           onKeyDown={handleKey}
@@ -72,7 +72,7 @@ export default function Search() {
 
       { user &&
       <div 
-      className="basis-4/5 flex space-x-2 m-1 hover:bg-[#2f2d52] cursor-pointer py-2 px-2"
+      className="basis-4/5 flex space-x-2 m-1 hover:bg-gray-100 cursor-pointer py-2 px-2"
       onClick={handleSelect}
       >
         <img
@@ -80,7 +80,7 @@ export default function Search() {
           src={user.photoURL}
           alt=""
         />
-        <div className="text-[#ddddf7] pt-1">{user.displayName}</div>
+        <div className="text-gray-500 font-medium pt-1">{user.displayName}</div>
       </div>
       }
     </div>

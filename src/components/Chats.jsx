@@ -38,16 +38,16 @@ export default function Chats() {
 
         <div key={chat[0]}
           onClick={()=>handleSelect(chat[1].userInfo)}
-          className='border-y border-[#2f2d52de] hover:bg-[#2f2d52] cursor-pointer'>
-          <div className="flex space-x-2 m-2">
+          className='border-b border-gray-300 hover:bg-gray-100 cursor-pointer'>
+          <div className="flex space-x-2 p-2">
             <img
               className="h-[40px] w-[40px] rounded-3xl"
               src={chat[1].userInfo.photoURL}
               alt=""
             />
             <div>
-              <div className="text-[#ddddf7] font-semibold">{chat[1].userInfo.displayName}</div>
-              <div className="text-[#ddddf7] text-sm">{chat[1].lastMessage?.text}</div>
+              <div className="text-gray-600 font-semibold">{chat[1].userInfo.displayName}</div>
+              <div className="text-gray-400 text-sm">{chat[1].lastMessage?.text}</div>
             </div>
           </div>
         </div>

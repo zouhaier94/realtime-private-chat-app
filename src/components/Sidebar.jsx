@@ -5,7 +5,7 @@ import Chats from '../components/Chats'
 
 export default function Sidebar() {
   return (
-    <div className='basis-1/3 bg-[#3e3c61]'>
+    <div className='md:w-[300px] w-[210px] bg-white border-r border-gray-200'>
       <Navbar />
       <Search />
       <Chats/>

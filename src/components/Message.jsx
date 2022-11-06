@@ -24,10 +24,10 @@ export default function Message({ message }) {
 
   return (
     <div ref={ref} className={message.senderId === currentUser.uid ?
-      'flex flex-row-reverse gap-1 border p-1' :
-      'flex flex-row gap-1 border p-1'}>
+      'flex flex-row-reverse gap-1 p-1 md:mr-4 mr-1' :
+      'flex flex-row gap-1 p-1'}>
 
-      <div>
+      <div className="py-2">
         <img
           className="h-[40px] w-[40px] rounded-3xl ml-1"
           src={message.senderId === currentUser.uid
@@ -40,8 +40,8 @@ export default function Message({ message }) {
 
       <div className='py-3 mx-1'>
 
-        <div className={message.senderId === currentUser.uid ? 'p-1 bg-[#a3b6f5] rounded-md w-fit text-white'
-          : 'p-1 bg-white rounded-md w-fit'}>{message.text}</div>
+        <div className={message.senderId === currentUser.uid ? 'p-1 bg-[#0084FF] rounded-md w-fit text-white'
+          : 'p-1 bg-gray-100 rounded-md w-fit'}>{message.text}</div>
         {message.img && <img
           className="h-[120px] w-[120px] mt-1 rounded-sm overflow-hidden"
           src={message.img}

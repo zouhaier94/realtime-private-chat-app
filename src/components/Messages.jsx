@@ -22,7 +22,7 @@ export default function Messages() {
 
 
   return (
-    <div className='bg-[#ddddf7] p-1 h-[500px] overflow-y-scroll '>
+    <div className='bg-white p-1 md:h-[500px] h-[400px] overflow-y-scroll '>
       {messages.map((m) => (
         <Message message={m} key={m.id} />
       ))}

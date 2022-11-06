@@ -67,26 +67,24 @@ export default function Input() {
   };
 
   return (
-    <div className='h-[50px] bg-white border p-1 flex'>
+    <div className='h-[50px] bg-white p-1 flex border-t '>
 
       <input 
-      className="w-[400px] outline-none placeholder-gray-300" 
+      className="md:w-[410px] w-[180px] outline-none placeholder-gray-300" 
       type="text" 
       placeholder='Type something...' 
       onChange={(e) => setText(e.target.value)}
       value={text}
       ></input>
 
-      <img className="my-1 cursor-grab" src={require('../images/attach.png')} alt="" />
 
       <input  type="file" className='hidden' id="file" onChange={(e) => setImg(e.target.files[0])}/>
-
-      <label  className="my-1 mr-1 cursor-grab" htmlFor='file'>
+      <label  className="mt-1 mr-1 cursor-grab" htmlFor='file'>
       <img src={require('../images/img.png')} alt="" />
       </label>
 
       <button 
-      className='bg-[#5d5b8d] text-[#ddddf7] rounded-md m-1 px-3 py-1 text-md'
+      className='bg-[#006AFF] text-white rounded-md m-1 px-2 py-1 text-md'
       onClick={handleSend}
       >Send</button>
     </div>
