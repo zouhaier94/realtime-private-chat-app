@@ -59,13 +59,16 @@ export default function Register() {
   }
 
   return (
-    <div className="shadow-md p-5 mx-auto">
-      <div className="container mx-auto my-14 w-[400px] border border-gray-300 bg-white rounded-md">
+    <div className="p-5 mx-auto">
+      <div className="container mx-auto my-14 w-[400px] border border-gray-300 bg-white rounded-sm">
         <div className="p-5 space-y-5 shadow-xl">
-          <h4 className="text-center text-2xl">Register</h4>
-
+          <div>
+          <h4 className="text-3xl font-bold text-[#1c1e21]">Sign Up</h4>
+          <p>It’s quick and easy.</p>
+          </div>
+          
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 ">
               <input
                 type="text"
                 className="border border-gray-300 px-4 py-2 rounded-md"
@@ -88,18 +91,20 @@ export default function Register() {
 
               <label htmlFor="file" className="w-fit">
                 <img
-                  className="h-14 cursor-grab"
-                  src={require("../images/addImg.png")}
+                  className="h-16 cursor-grab"
+                  src={require("../images/add--img.png")}
                   alt=""
                 ></img>
               </label>
             </div>
-
+            <div className="flex justify-center">
             <input
               type="submit"
-              value="Register"
-              className="cursor-pointer mt-5 bg-[#2d3436] px-4 py-2 text-white font-bold w-full rounded-md"
+              value="Sign Up"
+              className="cursor-pointer mt-5 bg-[#00a400] px-4 py-1 text-white font-bold w-[220px] text-lg rounded-md"
             />
+            </div>
+            
 
             <p className="mx-16 pt-2">You do have an account? <Link to="/login">Login</Link></p>
           </form>

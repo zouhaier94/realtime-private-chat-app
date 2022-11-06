@@ -25,23 +25,33 @@ export default function Login() {
   }
 
   return (
-    <div className="shadow-md p-5 mx-auto">
-    <div className="container mx-auto my-14 w-[400px] border border-gray-300 bg-white rounded-md">
-        <div className="p-5 space-y-5 shadow-xl">
-            <h4 className="text-center text-2xl">Login</h4>
+    <div className="p-5 mx-auto">
+
+    <div className="container mx-auto my-14 w-[500px] bg-white">
+    
+        <div className="p-5 space-y-5">
+          <div className='flex justify-center'>
+          <img className="h-16 " src={require("../images/Messenger_logo.png")}alt=""/>
+          </div>
+            <div className="text-center text-3xl">Connect with your favorite people.</div>
 
             <form onSubmit={handleSubmit}>
 
-            <div className="flex flex-col gap-5">
-            <input type="email"  className="border border-gray-300 px-4 py-2 rounded-md"  placeholder="Email"  />  
-            <input type="password" className="border border-gray-300 px-4 py-2 rounded-md"  placeholder="Password" /> 
+            <div className="flex flex-col gap-5 items-center">
+            <input type="email"  className="w-[350px] border border-gray-300 px-4 py-2 rounded-md mt-4 text-lg"  placeholder="Email"  />  
+            <input type="password" className=" w-[350px] border border-gray-300 px-4 py-2 rounded-md text-lg"  placeholder="Password" /> 
+            <input type="submit" value='Continue' className="mt-5 bg-[#0a7cff] px-4 py-2 text-white w-fit rounded-3xl" />  
+            <p className='mx-12'>You don't have an account? <Link to="/register">Register</Link></p>
             </div>
-            <input type="submit" value='Sign In' className="mt-5 bg-[#2d3436] px-4 py-2 text-white font-bold w-full rounded-md" />  
-            <p className='mx-12 pt-2'>You don't have an account? <Link to="/register">Register</Link></p>
+            
+           
             </form>
              
         </div>
+
     </div>
+
+
 </div>
   )
 }
